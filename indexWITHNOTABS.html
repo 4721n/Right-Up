@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="./index.css" type="text/css" rel="stylesheet">
+  <link href="font-family: 'Alata', sans-serif;" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap" rel="stylesheet">
+  <link rel='icon' type='image/x-icon' href='./favicon.ico' />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>RIGHT-UP - The only property description tool you need.</title>
+    <nav class = navbar>
+      <ul>
+        <li><a href="/Users/nathanwinter/Documents/Code Projects/Right-Up/indexNew.html">HOME</a></li>
+        <li><a href="/Users/nathanwinter/Documents/Code Projects/Right-Up/about.html">ABOUT US</a></li>
+        <li><a href="/Users/nathanwinter/Documents/Code Projects/Right-Up/moretools.html">MORE TOOLS</a></li>
+        <li><a href="/Users/nathanwinter/Documents/Code Projects/Right-Up/contactus.html">CONTACT US</a></li>
+      </ul>
+</head>
+
+<body>
+    </nav>
+
+    <h1>RIGHT-UP</h1>
+
+<div id="main">
+
+<script>
+// funtction setting inputs values 
+function myFunction()
+{
+
+  let numOfBedrooms = (document.getElementById("numOfBedrooms").value);
+  let numOfBathrooms = (document.getElementById("numOfBathrooms").value);
+  let condition = (document.getElementById("condition").value);
+  let propertyType = (document.getElementById("propertyType").value);
+  let ageOfProperty = (document.getElementById("ageOfProperty").value);
+  let feature1 = (document.getElementById("feature1").value);
+  let feature2 = (document.getElementById("feature2").value);
+// function generating random number and assigning that number with a switch for 1 of 3 template strings.
+
+  let randomNumber = Math.floor(Math.random() * 3) ;
+  let template =''
+//prints the output;
+  switch (randomNumber) {
+    case 0:
+    document.getElementById("output").innerHTML = "This " + ageOfProperty + " " + numOfBedrooms + " bedroom, " + numOfBathrooms + " bathroom " + propertyType + " " + condition  +  " " + " and has " + feature1 + " and " + feature2;
+      break;
+    case 1:
+    document.getElementById("output").innerHTML = "A " + ageOfProperty + ", " + numOfBedrooms + " bedroom, " + numOfBathrooms + " bathroom " + propertyType + " " + condition  +  " " + " and has " + feature1 + " and has " + feature2 ;
+      break;
+    case 2:
+    document.getElementById("output").innerHTML = "A stunning " + ageOfProperty + " " + numOfBedrooms + " bedroom, " + numOfBathrooms + " bathroom " + propertyType + " " + condition + " " + " and has " + feature1 + " and has " + feature2;
+      break;
+  }
+  
+};
+
+</script>
+<!--bedroom and bathroom input-->
+  Number of bedrooms: <input type="number" min="1" max="7" id="numOfBedrooms" value="2">
+  <br>
+  Number of Bathrooms: <input type="number" min="1" max="5" id="numOfBathrooms" value="1">
+  <br>
+<!--condition selector-->
+
+  Condition of House: 
+
+  <select id="condition" name="condition">
+    <option value="has been recently refurbished">Recently Refurbished</option>
+    <option value="is in excellent condition">Excellent Condition</option>
+    <option value="is in good condition">Good Condition</option>
+    <option value="is in fair condition">Fair Condition</option>
+    <option value="is in need of work">In Need of Work</option>
+    <option value=" ">Other</option>
+    </select>
+  <br>
+  <!--property type selector-->
+
+  Type of Property?: 
+  
+  <select id="propertyType" name="propertyType">
+    <option value="detached house">Detached</option>
+    <option value="semi-detached house">Semi-Detached</option>
+    <option value="terraced house">Terraced</option>
+    <option value="maisonette">Maisonette</option>
+    <option value="flat">Flat</option>
+    <option value="bungalow">Bungalow</option>
+    <option value=" ">Other</option>
+    </select>
+  <br>
+    <!--property age selector-->
+
+  Age of property: 
+  <select id="ageOfProperty" name="ageOfProperty">
+    <option value="modern">Modern</option>
+    <option value="Georgian">Georgian</option>
+    <option value="Victorian">Victorian</option>
+    <option value="Edwardian">Edwardian</option>
+    <option value="Neo-Georgian">Neo-Georgian</option>
+    <option value="1920's">1920's</option>
+    <option value="1930's">1930's</option>
+    <option value="pre-War">Pre-War</option>   
+    <option value="post War">Post War</option>
+    </select>
+  <br>
+    <!--additional feature input-->
+<br>
+  Additional features: 
+  <select id="feature1" name="feature1">
+    <option value="scope to extend">Scope to extend</option>
+    <option value="potential to loft convert (STPP)">Loft Conversion Potential</option>
+    <option value="a private rear garden">Private Garden</option>
+    <option value="a large sunny garden">Large Garden</option>
+    <option value="off-street parking">Off-Street Parking</option>
+    <option value="period features throughout">Period Features</option>
+    </select>
+  
+    <select id="feature2" name="feature2">
+      <option value="a private rear garden">Private Garden</option>
+      <option value="scope to extend">Scope to extend</option>
+      <option value="potential to loft convert (STPP)">Loft Conversion Potential</option>
+      <option value="a large sunny garden">Large Garden</option>
+      <option value="off-street parking">Off-Street Parking</option>
+      <option value="period features throughout">Period Features</option>
+      <option value=" ">N/A</option>
+
+      </select>
+<br><br>
+<button onclick="myFunction()" id="generateButton">GENERATE</button>
+
+</div>
+
+<div id="main">
+
+<textarea id="output"></textarea>
+<br>
+<button id="copy" onclick="copyClipboard()">Copy Right-up</button>
+
+<script>
+  document.querySelector("#copy").onclick = function(){
+    document.querySelector("textarea").select();
+    document.execCommand('copy');
+    alert("Copied to clipboard")
+}
+</script>
+
+</div>
+
+  </div>
+
+
+<!--beata alert-->
+
+<script>
+  alert("RIGHT-UP; Beta version 0.0.3 \n Updates: \n Features; select option, 2 instances\n UX/UI update \n Right-up templates corrected \n Copy to clipboard \n Pre-populated number inputs \n Developed by Nathan Winter");
+  </script>
+
+</body>
+</html>

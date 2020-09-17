@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <header>Javascript Lessons</header>
+
+<script>
+
+const name = 'Nathan';
+const age = 29;
+
+// template literal
+// back ticks `` not quotes ''/"" - variable within ${} |
+const string = `My name is ${name} and I am ${age}`
+console.log(string)
+
+//arrays
+
+const array = ['apple', 'cactus', 'octopus', 99];
+console.log(array);
+//selecting certain value in array
+console.log(array[2])
+//add to array (end of)
+array.push('pineapple');
+//add to array (begginig)
+array.unshift('strawberry');
+// delete last (array)
+array.pop();
+
+
+//object arrays;
+
+const person = {
+    firstName: 'Nathan',
+    lastName: 'Winter',
+    age: 29,
+    hobbies: [running, family, cosing]
+    address: { 
+        street:'Molesey Road'
+        city:'West Molesey'
+        postcode:'kt8 2hf'}
+}
+
+console.log(person.hobbies[1]);
+console.log(person.address.postcode);
+
+const { firstName, lastName} = fullName;
+console.log(fullName);
+
+person.email = 'nathan@js.com';
+console.log(person);
+
+//complex arrays;
+
+const todos = [
+    {
+        id: 1,
+        text: 'Wash up'
+        isCompleted: false
+    },
+    {
+        id: 2,
+        text: 'Change bins'
+        isCompleted: true
+    },
+]
+
+console.log(todos)
+
+</script>
+
+</body>
+</html>

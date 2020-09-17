@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./calc.html" type="text/css" rel="stylesheet">
+  <link href="font-family: 'Alata', sans-serif;" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+function getStampDutyOnHouse(){var house_price_input=document.getElementById("price_house").value;var house_price=parseFloat(house_price_input.replace(/,/g,''));var price=house_price_input;document.cookie='c-price='+price;if(house_price<500000.01){var stampDuty=0;}else if(house_price>=500000.01&&house_price<=925000.00){var stampDuty=(house_price-500000)*0.05;}else if(house_price>=925000.01&&house_price<=1500000.00){var stampDuty=((house_price-925000)*0.1)+21250;}else if(house_price>=1500000.01){var stampDuty=((house_price-1500000)*0.12)+78750;}stampDuty=Math.floor(stampDuty);effectiveRateLong=(stampDuty/house_price)*100;effectiveRate=Math.round(effectiveRateLong*100)/100.000;var SDLT="Stamp Duty:   \u00A3"+parseInt(stampDuty).toLocaleString()+"";var SDLTNUM=parseInt(stampDuty).toLocaleString()+"";var SDER=""+effectiveRate+"\u0025";document.getElementById("results").innerHTML=SDLT
+document.getElementById("results-effective-rate").innerHTML=SDER
+document.cookie='c-sdlt='+SDLTNUM;document.cookie='c-sdlter='+SDER;var stampDutyBandA=0;var stampDutyBandB=0;var stampDutyBandC=0;var stampDutyBandD=0;if(house_price<500000.01){var stampDutyBandA=0;}else if(house_price>=500000.01&&house_price<=925000.00){var stampDutyBandB=((house_price-500000)*0.05);}else if(house_price>=925000.01&&house_price<=1500000.00){var stampDutyBandB=21250;var stampDutyBandC=((house_price-925000)*0.1);}else if(house_price>=1500000.01){var stampDutyBandB=21250;var stampDutyBandC=57500;var stampDutyBandD=((house_price-1500000)*0.12);}stampDutyBandA=Math.floor(stampDutyBandA);stampDutyBandB=Math.floor(stampDutyBandB);stampDutyBandC=Math.floor(stampDutyBandC);stampDutyBandD=Math.floor(stampDutyBandD);var SDBA="\u00A3"+parseInt(stampDutyBandA).toLocaleString()+"";var SDBB="\u00A3"+parseInt(stampDutyBandB).toLocaleString()+"";var SDBC="\u00A3"+parseInt(stampDutyBandC).toLocaleString()+"";var SDBD="\u00A3"+parseInt(stampDutyBandD).toLocaleString()+"";var SDBAPDF=parseInt(stampDutyBandA).toLocaleString()+"";var SDBBPDF=parseInt(stampDutyBandB).toLocaleString()+"";var SDBCPDF=parseInt(stampDutyBandC).toLocaleString()+"";var SDBDPDF=parseInt(stampDutyBandD).toLocaleString()+"";document.getElementById("results-sdltbanda").innerHTML=SDBA
+document.getElementById("results-sdltbandb").innerHTML=SDBB
+document.getElementById("results-sdltbandc").innerHTML=SDBC
+document.getElementById("results-sdltbandd").innerHTML=SDBD
+document.cookie='c-sdltbanda='+SDBAPDF;document.cookie='c-sdltbandb='+SDBBPDF;document.cookie='c-sdltbandc='+SDBCPDF;document.cookie='c-sdltbandd='+SDBDPDF;var taxSumBandA=0;var taxSumBandB=0;var taxSumBandC=0;var taxSumBandD=0;if(house_price<500000.01){var taxSumBandA=0;}else if(house_price>=500000.01&&house_price<=925000.00){var taxSumBandB=(house_price-500000);}else if(house_price>=925000.01&&house_price<=1500000.00){var taxSumBandB=425000;var taxSumBandC=(house_price-925000);}else if(house_price>=1500000.01){var taxSumBandB=425000;var taxSumBandC=575000;var taxSumBandD=(house_price-1500000);}taxSumBandA=Math.floor(taxSumBandA);taxSumBandB=Math.floor(taxSumBandB);taxSumBandC=Math.floor(taxSumBandC);taxSumBandD=Math.floor(taxSumBandD);var TSBA="\u00A3"+parseInt(taxSumBandA).toLocaleString()+"";var TSBB="\u00A3"+parseInt(taxSumBandB).toLocaleString()+"";var TSBC="\u00A3"+parseInt(taxSumBandC).toLocaleString()+"";var TSBD="\u00A3"+parseInt(taxSumBandD).toLocaleString()+"";var TSBAPDF=parseInt(taxSumBandA).toLocaleString()+"";var TSBBPDF=parseInt(taxSumBandB).toLocaleString()+"";var TSBCPDF=parseInt(taxSumBandC).toLocaleString()+"";var TSBDPDF=parseInt(taxSumBandD).toLocaleString()+"";document.getElementById("results-taxsuma").innerHTML=TSBA
+document.getElementById("results-taxsumb").innerHTML=TSBB
+document.getElementById("results-taxsumc").innerHTML=TSBC
+document.getElementById("results-taxsumd").innerHTML=TSBD
+document.cookie='c-sdlttaxsuma='+TSBAPDF;document.cookie='c-sdlttaxsumb='+TSBBPDF;document.cookie='c-sdlttaxsumc='+TSBCPDF;document.cookie='c-sdlttaxsumd='+TSBDPDF;}
+
+function StampDutyBTL(){var house_price_input=document.getElementById("price_house_btl").value;var house_price=parseFloat(house_price_input.replace(/,/g,''));var price_btl=house_price_input;document.cookie='c-pricebtl='+price_btl;if(house_price<40000){var stampDuty=0;}else if(house_price>=40000&&house_price<=500000.00){var stampDuty=(house_price)*0.03;}else if(house_price>=500000.01&&house_price<=925000.00){var stampDuty=((house_price-500000)*0.08)+15000;}else if(house_price>=925000.01&&house_price<=1500000.00){var stampDuty=((house_price-925000)*0.13)+49000;}else if(house_price>=1500000.01){var stampDuty=((house_price-1500000)*0.15)+123750;}stampDuty=Math.floor(stampDuty);effectiveRateLong=(stampDuty/house_price)*100;effectiveRate=Math.round(effectiveRateLong*100)/100.000;var SDLT="Stamp Duty:   \u00A3"+parseInt(stampDuty).toLocaleString()+"";var SDLTNUM=parseInt(stampDuty).toLocaleString()+"";var SDER=""+effectiveRate+"\u0025";document.getElementById("results_btl").innerHTML=SDLT
+document.getElementById("results-btl-effective-rate").innerHTML=SDER
+document.cookie='c-sdltbtl='+SDLTNUM;document.cookie='c-sdltbtler='+SDER;var stampDutyBandA=0;var stampDutyBandB=0;var stampDutyBandC=0;var stampDutyBandD=0;if(house_price<40000){var stampDutyBandA=0;}else if(house_price>=40000&&house_price<=500000.00){var stampDutyBandA=(house_price)*0.03;}else if(house_price>=500000.01&&house_price<=925000.00){var stampDutyBandA=15000;var stampDutyBandB=((house_price-500000)*0.08);}else if(house_price>=925000.01&&house_price<=1500000.00){var stampDutyBandA=15000;var stampDutyBandB=34000;var stampDutyBandC=((house_price-925000)*0.13);}else if(house_price>=1500000.01){var stampDutyBandA=15000;var stampDutyBandB=34000;var stampDutyBandC=74750;var stampDutyBandD=((house_price-1500000)*0.15);}stampDutyBandA=Math.floor(stampDutyBandA);stampDutyBandB=Math.floor(stampDutyBandB);stampDutyBandC=Math.floor(stampDutyBandC);stampDutyBandD=Math.floor(stampDutyBandD);var SDBA="\u00A3"+parseInt(stampDutyBandA).toLocaleString()+"";var SDBB="\u00A3"+parseInt(stampDutyBandB).toLocaleString()+"";var SDBC="\u00A3"+parseInt(stampDutyBandC).toLocaleString()+"";var SDBD="\u00A3"+parseInt(stampDutyBandD).toLocaleString()+"";var SDBAPDF=parseInt(stampDutyBandA).toLocaleString()+"";var SDBBPDF=parseInt(stampDutyBandB).toLocaleString()+"";var SDBCPDF=parseInt(stampDutyBandC).toLocaleString()+"";var SDBDPDF=parseInt(stampDutyBandD).toLocaleString()+"";document.getElementById("results-btlsdltbanda").innerHTML=SDBA
+document.getElementById("results-btlsdltbandb").innerHTML=SDBB
+document.getElementById("results-btlsdltbandc").innerHTML=SDBC
+document.getElementById("results-btlsdltbandd").innerHTML=SDBD
+document.cookie='c-sdltbtlbanda='+SDBAPDF;document.cookie='c-sdltbtlbandb='+SDBBPDF;document.cookie='c-sdltbtlbandc='+SDBCPDF;document.cookie='c-sdltbtlbandd='+SDBDPDF;var taxSumBandA=0;var taxSumBandB=0;var taxSumBandC=0;var taxSumBandD=0;if(house_price<40000){var taxSumBandA=0;}else if(house_price>=40000&&house_price<=500000.00){var taxSumBandA=house_price;}else if(house_price>=500000.01&&house_price<=925000.00){var taxSumBandA=500000;var taxSumBandB=(house_price-500000);}else if(house_price>=925000.01&&house_price<=1500000.00){var taxSumBandA=500000;var taxSumBandB=425000;var taxSumBandC=(house_price-925000);}else if(house_price>=1500000.01){var taxSumBandA=500000;var taxSumBandB=425000;var taxSumBandC=575000;var taxSumBandD=(house_price-1500000);}taxSumBandA=Math.floor(taxSumBandA);taxSumBandB=Math.floor(taxSumBandB);taxSumBandC=Math.floor(taxSumBandC);taxSumBandD=Math.floor(taxSumBandD);var TSBA="\u00A3"+parseInt(taxSumBandA).toLocaleString()+"";var TSBB="\u00A3"+parseInt(taxSumBandB).toLocaleString()+"";var TSBC="\u00A3"+parseInt(taxSumBandC).toLocaleString()+"";var TSBD="\u00A3"+parseInt(taxSumBandD).toLocaleString()+"";var TSBAPDF=parseInt(taxSumBandA).toLocaleString()+"";var TSBBPDF=parseInt(taxSumBandB).toLocaleString()+"";var TSBCPDF=parseInt(taxSumBandC).toLocaleString()+"";var TSBDPDF=parseInt(taxSumBandD).toLocaleString()+"";document.getElementById("results-btltaxsuma").innerHTML=TSBA
+document.getElementById("results-btltaxsumb").innerHTML=TSBB
+document.getElementById("results-btltaxsumc").innerHTML=TSBC
+document.getElementById("results-btltaxsumd").innerHTML=TSBD
+document.cookie='c-sdltbtltaxsuma='+TSBAPDF;document.cookie='c-sdltbtltaxsumb='+TSBBPDF;document.cookie='c-sdltbtltaxsumc='+TSBCPDF;document.cookie='c-sdltbtltaxsumd='+TSBDPDF;}
+
+</script>
+
+<section class="pb-4">
+    <div class="tabPanel-widget">
+        <label for="tab-1" tabindex="0"></label>
+        <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+        <h2>Single Property</h2>
+        <div class="price-entry">
+            <form name="SDLTForm" action="" onsubmit="return SDLTForm_Validator(this)" language="JavaScript">
+                <div class="mb-3" align="center">
+                    <br>
+                    <h4 class="mb-3">Purchase Price</h4>
+                    <input class="number" id="price_house" type="tel" maxlength="11" size="8" name="SDValue" placeholder="£">
+                    <p>(Enter numbers only)</p>
+                    <p class="mb-4"><a class="link_cursor" onclick="return getStampDutyOnHouse()"> <img src="https://www.stampdutycalculator.org.uk/images/xcalculate-button6.gif.pagespeed.ic.1rH3z87IXW.webp" alt="Calculate"></a></p>
+                    <h3 class="textresult">
+                        <div class="mb-4" id="results">Stamp Duty:   £0</div>
+                    </h3>
+                    <i class="fas fa-calculator fa-lg text-primary mr-2"></i><a class="text-secondary link_cursor mr-2" onclick="show('sdltfull')">Full Calculation</a>
+                    <i class="fas fa-download fa-lg text-primary ml-2 mr-2"></i><a class="text-secondary" href="https://www.stampdutycalculator.org.uk/pdf/sdlt/pdf-sdlt-single-property-sdh.php" target="_top">PDF</a>
+                    <div id="sdltfull" style="display: block;">
+                        <br>
+                        <table id="TABLE1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <td><big><strong>Effective Rate</strong></big></td>
+                                    <td><big><strong><div id="results-effective-rate">0%</div></strong></big></td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table id="TABLE1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tax Band</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">Taxable Sum</th>
+                                    <th scope="col">Tax</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">less than £500k</th>
+                                    <td>0</td>
+                                    <td><div id="results-taxsuma">£0</div></td>
+                                    <td><div id="results-sdltbanda">£0</div></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">£500k to £925k</th>
+                                    <td>5</td>
+                                    <td><div id="results-taxsumb">£0</div></td>
+                                    <td><div id="results-sdltbandb">£0</div></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">£925k to £1.5m</th>
+                                    <td>10</td>
+                                    <td><div id="results-taxsumc">£0</div></td>
+                                    <td><div id="results-sdltbandc">£0</div></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">rest over £1.5m</th>
+                                    <td>12</td>
+                                    <td><div id="results-taxsumd">£0</div></td>
+                                    <td><div id="results-sdltbandd">£0</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <label for="tab-2" tabi="" ndex="0"></label>
+        <input id="tab-2" type="radio" name="tabs" aria-h="" idden="true">
+        <h2>Additional Property</h2>
+        <div class="price-entry">
+            <form name="SDLTFormBTL" action="" onsubmit="return SDLTFormBTL_Validator(this)" language="JavaScript">
+                <div class="mb-3" align="center">
+                    <br>
+                    <h4 class="mb-3">Purchase Price</h4>
+                    <input class="number" id="price_house_btl" type="tel" maxlength="11" size="8" name="SDValue" placeholder="£">
+                    <p>(Enter numbers only)</p>
+                    <p class="mb-4"><a class="link_cursor" onclick="return StampDutyBTL()"> <img src="https://www.stampdutycalculator.org.uk/images/xcalculate-button6.gif.pagespeed.ic.1rH3z87IXW.webp" alt="Calculate"></a></p>
+                    <h3 class="textresult">
+                        <div class="mb-4" id="results_btl">
+                            <br>
+                        </div>
+                                </form>
+        </div>
+    </div>
+
+</section>
+
+    
+</body>
+</html>

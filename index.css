@@ -1,0 +1,232 @@
+* {
+  font-family: "Alata", sans-serif;
+  font-weight: ;
+  text-align: center;
+  color: whitesmoke;
+}
+
+body {
+  background-image: linear-gradient(-90deg, #dfe6e9, #b2bec3);
+}
+
+#main,
+#main2 {
+  width: 300px;
+  border: 3px solid rgba(48, 96, 151, 0.616);
+  background-image: linear-gradient(45deg, #273c75, #273c75);
+  padding: 25px 200px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 20px #4e4e4e;
+  border-radius: 25px;
+}
+
+
+
+#generateButton,
+#generateButton2 {
+  background-image: linear-gradient(-45deg, #02bb8c, #02bb8c);
+  padding: 15px 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: ;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out 0.1s;
+}
+
+#generateButton:hover,
+#generateButton2:hover {
+  background-image: linear-gradient(-45deg, #02bb8c, #00a8ff);
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 2px solid teal;
+  transition: all 0.25s ease-in-out 0.075s;
+}
+
+.btn {
+  background-color: #02bb8c;
+  padding: 15px;
+  color: white;
+  border-radius: 50px;
+  width: 70px;
+  position: relative;
+  margin-top: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  box-shadow: 2px 2px 5px #001824;
+}
+
+main {
+  width: 300px;
+  border: 10px solid whitesmoke;
+  padding: 50px 250px;
+  margin: 0 auto;
+  background-color: RGB(22, 54, 99);
+}
+
+input {
+  padding: 15px 0px;
+  margin: 10px;
+  background-color: #f5f6fa;
+  border: 0px solid #ddd;
+  color: black;
+  border-width: thin;
+  width: 320px;
+  margin-bottom: 20px;
+  outline: 2px whitesmoke solid;
+  float: right;
+  font-size: 15px;
+  box-shadow: 2px 2px 5px #001824;
+  outline: none;
+  border-radius: 20px;
+}
+
+select {
+  text-align: center;
+  padding: 15px 0px;
+  margin: 10px;
+  background-color: #f5f6fa;
+  border: 1px solid #ddd;
+  color: black;
+  border-width: thin;
+  width: 320px;
+  margin-bottom: 20px;
+  outline: 2px whitesmoke solid;
+  float: right;
+  font-size: 15px;
+  box-shadow: 1px 2px 2px #888888;
+  text-align-last: center;
+  outline: none;
+  box-shadow: 2px 2px 5px #001824;
+  outline: none;
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 65px;
+  letter-spacing: 4px;
+  color: #02bb8c;
+  text-shadow: 2px 2px 5px #888888;
+}
+
+ul {
+  display: inline;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #333;
+  overflow: hidden;
+  justify-content: space-around;
+}
+
+li {
+  display: inline;
+  padding-right: 20px;
+  float: left;
+  display: block;
+  padding: 8px;
+  background-color: #333;
+  color: white;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  color: white;
+  border-color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h3 {
+  font-style: italic;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+textarea {
+  margin-top: 20px;
+  font-size: 1.2em;
+  width: 370px;
+  height: 140px;
+  border: none;
+  background-color: #273c75;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#copy {
+  background-image: linear-gradient(-45deg, #02bb8c, #02bb8c);
+  padding: 15px 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: ;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out 0.1s;
+}
+
+#copy:hover {
+  background-image: linear-gradient(-45deg, #02bb8c, #00a8ff);
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 2px solid teal;
+  transition: all 0.25s ease-in-out 0.075s;
+}
+
+#tabSelector {
+position: relative;
+  background-color: #192a56;
+  padding: 10px 90px;
+  margin: 0 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out 0.1s;
+}
+
+#tabSelector :hover {
+  background-color: #fff );
+  transition: all 0.25s ease-in-out 0.075s;
+}
+
+.tabHeader {
+  width: 50%;
+  display: inline;
+}
