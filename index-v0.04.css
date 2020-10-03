@@ -1,57 +1,47 @@
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: ;
   text-align: center;
-  color: black;
-  font-weight: 700;
+  color: whitesmoke;
 }
 
 body {
-  background-image: linear-gradient(-90deg, #00b3ff7e, #00db6e50);
+  background-image: linear-gradient(-90deg, #dfe6e9, #b2bec3);
 }
 
 #main,
 #main2 {
-  background-color: white;
-  width: 310px;
+  width: 300px;
+  border: 3px solid rgba(48, 96, 151, 0.616);
+  background-image: linear-gradient(45deg, #273c75, #273c75);
   padding: 25px 200px;
-  margin: 20px auto;
+  margin: 10px auto;
   box-shadow: 0px 0px 20px #4e4e4e;
   border-radius: 25px;
-  margin-bottom: 100px;
 }
+
+
 
 #generateButton,
 #generateButton2,
 #copyID,
 #copyID2 {
-  background-image: linear-gradient(-45deg, #02bb8d69, #00aaff7a);
+  background-image: linear-gradient(-45deg, #02bb8c, #02bb8c);
   padding: 15px 10px;
   border-radius: 15px;
   color: white;
   font-weight: ;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 0.25s ease-in-out 0.1s;
-  border: none;
-  font-weight: 555;
-}
-
-#copyID,
-#copyID2 {
-  border-radius: 10px;
-  padding: 10px 10px;
-  font-size: 12px;
-  margin-bottom: 20px;
 }
 
 #generateButton:hover,
-#generateButton2:hover,
-#copyID:hover,
-#copyID2:hover {
+#generateButton2:hover {
   background-image: linear-gradient(-45deg, #02bb8c, #00a8ff);
   padding-right: 20px;
   padding-left: 20px;
+  border: 2px solid teal;
   transition: all 0.25s ease-in-out 0.075s;
 }
 
@@ -70,60 +60,61 @@ button:focus {
 }
 
 button {
+  box-shadow: 2px 2px 5px #001824;
+}
+
+main {
+  width: 300px;
+  border: 10px solid whitesmoke;
+  padding: 50px 250px;
+  margin: 0 auto;
+  background-color: RGB(22, 54, 99);
 }
 
 input {
-  font-weight: normal;
-  font-size: 12px;
-  padding: 10px 0px;
+  padding: 15px 0px;
   margin: 10px;
   background-color: #f5f6fa;
+  border: 0px solid #ddd;
   color: black;
+  border-width: thin;
   width: 320px;
   margin-bottom: 20px;
+  outline: 2px whitesmoke solid;
   float: right;
   font-size: 15px;
+  box-shadow: 2px 2px 5px #001824;
   outline: none;
-  border-radius: 30px;
-  border: 1.5px solid rgba(228, 228, 228, 0.664);
-}
-
-input:focus {
+  border-radius: 20px;
 }
 
 select {
-  font-weight: normal;
   text-align: center;
   padding: 15px 0px;
   margin: 10px;
-  background-color: #eeeeee57;
+  background-color: #f5f6fa;
+  border: 1px solid #ddd;
   color: black;
+  border-width: thin;
   width: 320px;
   margin-bottom: 20px;
+  outline: 2px whitesmoke solid;
   float: right;
-  font-size: 12px;
+  font-size: 15px;
+  box-shadow: 1px 2px 2px #888888;
   text-align-last: center;
   outline: none;
+  box-shadow: 2px 2px 5px #001824;
+  outline: none;
   border-radius: 20px;
-  border: 1.5px solid rgba(228, 228, 228, 0.664);
 }
 
 h1 {
   font-family: "Fredoka One", cursive;
   font-size: 65px;
   letter-spacing: 4px;
-  color: #d7fff000;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(0, 0, 0);
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-h1:hover {
-  color: black;
-  transition: 0.75s;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(0, 0, 0);
+  color: #02bb8c;
+  text-shadow: 2px 2px 5px #888888;
 }
 
 ul {
@@ -188,20 +179,18 @@ p {
   font-size: 1.25em;
 }
 
+
 #output,
 #output2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
-  width: 200px;
-  height: 175px;
+  width: 300px;
+  height: 100px;
   padding-top: 30px;
   border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: normal;
-  font-size: 12px;
+  background-color: #273c75;
 }
 
 textarea:focus {
@@ -209,42 +198,39 @@ textarea:focus {
 }
 
 #copy {
-  background-image: linear-gradient(-45deg, #02bb8c, #00a8ff);
+  background-image: linear-gradient(-45deg, #02bb8c, #02bb8c);
   padding: 15px 10px;
   border-radius: 15px;
   color: white;
   font-weight: ;
   font-size: 15px;
   cursor: pointer;
-  transition: all 1s ease-in-out 0.1s;
-  margin-top: 0px;
+  transition: all 0.25s ease-in-out 0.1s;
 }
 
 #copy:hover {
-  background-image: linear-gradient(-45deg, #02bb8c, #02bb8c);
+  background-image: linear-gradient(-45deg, #02bb8c, #00a8ff);
   padding-right: 20px;
   padding-left: 20px;
   border: 2px solid teal;
-  border-radius: 50%;
-  transition: all 1s ease-in-out 0.075s;
+  transition: all 0.25s ease-in-out 0.075s;
 }
 
 #tabSelector {
-  position: relative;
-  background-color: #ffffff;
+position: relative;
+  background-color: #192a56;
   padding: 10px 90px;
   margin: 0 10px;
   border-radius: 15px;
-  color: rgb(0, 0, 0);
+  color: white;
   font-size: 15px;
   cursor: pointer;
   transition: all 0.25s ease-in-out 0.1s;
-  border: none;
 }
 
-#tabSelector:hover {
-  background-color: rgba(255, 255, 255, 0.233);
-  transition: 1s;
+#tabSelector :hover {
+  background-color: #fff );
+  transition: all 0.25s ease-in-out 0.075s;
 }
 
 .tabHeader {
